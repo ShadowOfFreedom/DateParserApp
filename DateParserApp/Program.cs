@@ -1,4 +1,5 @@
 ﻿using System;
+using DateParserLib;
 
 namespace DateParserApp
 {
@@ -6,7 +7,9 @@ namespace DateParserApp
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			DateParser date = new DateParser(args[0], args[1]);
+			Console.WriteLine(date.Compare());
+			Console.ReadKey();
 		}
 	}
 }
