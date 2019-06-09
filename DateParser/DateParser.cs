@@ -39,14 +39,23 @@ namespace DateParserLib
 		{
 			var result = new StringBuilder();
 
-			if(!DaysAreEqual)
-				result.Append(FirstDate.Day.ToString("D2"));
-
-			if (!MonthsAreEqual)
-				result.Append(".").Append(FirstDate.Month.ToString("D2"));
-
 			if (!YearsAreEqual)
-				result.Append(".").Append(FirstDate.Year.ToString("D4"));
+				result
+					.Append(FirstDate.Day.ToString("D2"))
+					.Append(".").Append(FirstDate.Month.ToString("D2"))
+					.Append(".").Append(FirstDate.Year.ToString("D4"));
+
+			else if (!MonthsAreEqual)
+				result
+					.Append(FirstDate.Day.ToString("D2"))
+					.Append(".").Append(FirstDate.Month.ToString("D2"));
+
+			else if (!DaysAreEqual)
+				result
+					.Append(FirstDate.Day.ToString("D2"));
+
+
+
 
 			result.Append($" - {SecondDate.ToShortDateString()}");
 
