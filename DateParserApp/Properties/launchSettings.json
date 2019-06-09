@@ -1,8 +1,7 @@
 {
   "profiles": {
     "DateParserApp": {
-      "commandName": "Project",
-      "commandLineArgs": "01.01.2017 05.01.2017"
+      "commandName": "Project"
     }
   }
 }

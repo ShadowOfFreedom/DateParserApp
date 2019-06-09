@@ -54,8 +54,8 @@ namespace DateParserLib
 				result
 					.Append(FirstDate.Day.ToString("D2"));
 
-
-
+			if (string.IsNullOrEmpty(result.ToString()))
+				return SecondDate.ToShortDateString();
 
 			result.Append($" - {SecondDate.ToShortDateString()}");
 
